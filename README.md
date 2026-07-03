@@ -9,7 +9,7 @@ código **terminado** de esa clase: si te atascas, abre esa carpeta y sigues con
 En la terminal de VS Code (`Ctrl` + `ñ`):
 
 ```
-git clone https://github.com/TU-USUARIO/curso-etabs-ia.git
+git clone https://github.com/neoluist/curso-etabs-ia.git
 ```
 
 > Es un repo **público**: no necesitas cuenta ni iniciar sesión. Si VS Code muestra
