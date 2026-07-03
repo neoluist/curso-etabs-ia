@@ -27,6 +27,7 @@ git clone https://github.com/neoluist/curso-etabs-ia.git
 |---|---|---|
 | `clase-02/` | Tu taller | Tus primeros scripts + el bonus que abre ETABS y dibuja una grilla |
 | `clase-03/` | Python en acción | **GRILLA EXPRESS v1.0** (tu primera app) + el puente y el diálogo con ETABS |
+| `clase-03/versiones/` | Checkpoints | Cada versión intermedia de GRILLA EXPRESS (v0.1 a v0.4) por si te pierdes a mitad de camino |
 
 ## Cómo ejecutar un script
 
