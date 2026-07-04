@@ -28,6 +28,17 @@ git clone https://github.com/neoluist/curso-etabs-ia.git
 | `clase-02/` | Tu taller | Tus primeros scripts + el bonus que abre ETABS y dibuja una grilla |
 | `clase-03/` | Python en acción | **GRILLA EXPRESS v1.0** (tu primera app) + el puente y el diálogo con ETABS |
 | `clase-03/versiones/` | Checkpoints | Cada versión intermedia de GRILLA EXPRESS (v0.1 a v0.4) por si te pierdes a mitad de camino |
+| `app/` | **LA APLICACIÓN** (Clase 04+) | El panel web + servidor que modela edificios E.030 completos en ETABS. Instrucciones en `app/LEEME.txt` |
+
+## La aplicación (Clase 04 en adelante)
+
+Desde la Clase 04 el curso usa **la app completa** (carpeta `app/`):
+
+1. `git pull` para traer lo último.
+2. Doble clic a `app\INSTALAR.bat` — **una sola vez** (instala las cajas del servidor y del panel).
+3. Doble clic a `app\INICIAR.bat` — **cada vez que trabajes** (abre servidor + panel + navegador).
+
+Detalles y solución de problemas: [`app/LEEME.txt`](app/LEEME.txt).
 
 ## Cómo ejecutar un script
 
