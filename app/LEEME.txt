@@ -1,0 +1,55 @@
+CURSO ETABS + IA - LA APLICACION (Clase 04 en adelante)
+========================================================
+
+Que es
+------
+La app del curso: un panel web (React) + un servidor local (Python/FastAPI)
+que le da ordenes a ETABS por su API oficial (COM, comtypes).
+El flujo guiado modela un edificio completo segun la E.030:
+grilla -> materiales -> secciones -> dibujo -> cargas -> espectro -> analisis.
+
+Requisitos (los instalaste en la Parte 1 del curso)
+---------------------------------------------------
+- Windows con ETABS 22 instalado
+- Python 3.12 (cualquier 3.12.x; convive bien con otros Python)
+- Node.js LTS (npm)
+
+Instalar (UNA sola vez)
+-----------------------
+1) Doble clic a  INSTALAR.bat
+   - crea el entorno del servidor (servidor\osenv312) e instala
+     fastapi, uvicorn, comtypes y openpyxl
+   - instala las cajas del panel (npm install)
+
+Usar (cada vez)
+---------------
+1) Abre ETABS (un modelo en blanco basta)
+2) Doble clic a  INICIAR.bat
+   - ventana 1: el SERVIDOR (http://127.0.0.1:8000)
+   - ventana 2: el PANEL    (http://localhost:5173)
+   - se abre el navegador con la app
+3) En la app: boton SERVIDOR en verde -> pestana "Flujo de trabajo" -> a modelar
+4) Para cerrar: cierra las 2 ventanas negras
+
+Si algo falla
+-------------
+- "No se pudo conectar al servidor": revisa que INICIAR.bat este corriendo
+  y que las 2 ventanas negras sigan vivas. Cierralas todas y vuelve a INICIAR.
+- Conecta pero todo devuelve None: ETABS "fantasma" -> Ctrl+Shift+Esc,
+  finalizar ETABS.exe y reabrir ETABS.
+- Banner "reinicia el servidor": despues de un git pull, cierra las
+  ventanas negras e INICIAR de nuevo.
+- Mas ayuda: el botiquin de la Clase 04 en el aula.
+
+Nota sobre las claves de IA (pestana Asistente IA)
+--------------------------------------------------
+La pestana de IA es opcional y pide TU propia clave (Gemini tiene capa
+gratuita). Se configura dentro de la app (engranaje) y se guarda SOLO en
+tu navegador. El resto de la app funciona sin ninguna clave.
+
+Nota sobre OpenSees (pestana OpenSees)
+--------------------------------------
+La verificacion cruzada con OpenSees se activa en la recta final del
+curso instalando openseespy DENTRO del entorno del servidor:
+  servidor\osenv312\Scripts\python.exe -m pip install openseespy
+Mientras tanto la pestana avisara que no esta disponible (es normal).
