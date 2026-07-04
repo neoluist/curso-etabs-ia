@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Tipografia premium: Inter para UI, JetBrains Mono para codigo (Tailwind v4 tokens) */
+@theme {
+  --font-sans: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+
+  /* COLOR DE MARCA — Ingeniería Fácil (ingenieriafacil.com): azul (#1d4ed8/#0284c7) + ámbar.
+     La app usa "cyan" como acento primario en toda la UI; remapeamos esa escala al AZUL de
+     la marca (valores Tailwind 'blue') -> todo el cian se vuelve azul de marca sin tocar clases.
+     El ámbar (warnings, bus de cargas) ya coincide con el acento. El verde se reserva a éxito. */
+  --color-cyan-50: #eff6ff;
+  --color-cyan-100: #dbeafe;
+  --color-cyan-200: #bfdbfe;
+  --color-cyan-300: #93c5fd;
+  --color-cyan-400: #60a5fa;
+  --color-cyan-500: #3b82f6;
+  --color-cyan-600: #2563eb;
+  --color-cyan-700: #1d4ed8;
+  --color-cyan-800: #1e40af;
+  --color-cyan-900: #1e3a8a;
+  --color-cyan-950: #172554;
+}
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.005em;
+}
+
+/* Scrollbars finos y discretos (estilo app profesional) */
+* { scrollbar-width: thin; scrollbar-color: rgba(148, 163, 184, 0.22) transparent; }
+*::-webkit-scrollbar { width: 9px; height: 9px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.22);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.45);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-corner { background: transparent; }
+
+::selection { background: rgba(37, 99, 235, 0.32); color: #fff; }
+
+/* Quita el outline azul por defecto (usamos rings de Tailwind) */
+:focus { outline: none; }
+
+/* Resaltado de sintaxis del editor "Codigo + Terminal" (highlightPython).
+   Paleta oscura legible (estilo Tokyo Night) con identidad azul de la marca. */
+.tk-com   { color: #5a648a; font-style: italic; }   /* comentarios */
+.tk-str   { color: #9ece6a; }                        /* cadenas */
+.tk-num   { color: #ff9e64; }                        /* numeros */
+.tk-kw    { color: #bb9af7; }                        /* palabras clave */
+.tk-const { color: #ff9e64; }                        /* True/False/None */
+.tk-bi    { color: #2ac3de; }                        /* builtins / self */
+.tk-fn    { color: #7aa2f7; }                        /* llamadas a funcion */
+.tk-dec   { color: #e0af68; }                        /* decoradores @ */
