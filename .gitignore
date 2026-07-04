@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 .vscode/
+# instalacion local de la app (cada alumno genera la suya con INSTALAR.bat)
+app/servidor/osenv312/
+app/panel/node_modules/
+app/panel/dist/
